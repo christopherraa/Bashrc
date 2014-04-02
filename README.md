@@ -16,7 +16,7 @@ I use this repository by including the following at the bottom of my ~/.bashrc f
 
 The above piece of code has been shamelessly copied from http://www.turnkeylinux.org/blog/generic-shell-hooks .
 
-The next step is pointing ~/.bashrc.d to ~/PATH/TO/THIS/REPO/scripts (tip: `ln` is your friend). After that you control which files are loaded by toggling the executale-flag on/off. If you have your own stuff you'd like to load as well then just place that in ~/bashrc.d and add the following to the bottom of the ~/.bashrc file:
+The next step is pointing ~/.bashrc.d to ~/PATH/TO/THIS/REPO/scripts (tip: `ln` is your friend). After that you control which files are loaded by toggling the executable-flag on/off. If you have your own stuff you'd like to load as well then just place that in ~/bashrc.d and add the following to the bottom of the ~/.bashrc file:
 
     run_scripts ~/PATH/TO/THIS/REPO/scripts
 
