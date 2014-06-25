@@ -1,0 +1,1 @@
+#export PERL_UNICODE=SDL
