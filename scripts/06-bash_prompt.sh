@@ -36,10 +36,23 @@ function parse_git_branch {
 		echo " (${branch})${remote}${state}"
 	fi
 }
- 
+
+function new_mail {
+	if ! which mu &>/dev/null; then
+		return
+	fi
+
+	if [ ! -d ~/Maildir ]; then
+		return
+	fi
+
+	new_count="$(mu find flag:new|wc -l)"
+	echo "${GREEN}${new_count}✉"
+}
+
 function prompt_func() {
 	previous_return_value=$?;
-	prompt="${TITLEBAR}${BLUE}[${YELLOW}\u@\h ${LIGHT_RED}\t${BLUE}]\n[${RED}\w${GREEN}$(parse_git_branch)${BLUE}]${COLOR_NONE} "
+	prompt="${TITLEBAR}${BLUE}[${YELLOW}\u@\h ${LIGHT_RED}\t $(new_mail)${BLUE}]\n[${RED}\w${GREEN}$(parse_git_branch)${BLUE}]${COLOR_NONE} "
 	if test $previous_return_value -eq 0
 	then
 		PS1="${prompt}➔ "
