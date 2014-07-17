@@ -46,7 +46,7 @@ function new_mail {
 		return
 	fi
 
-	new_count="$(mu find flag:new|wc -l)"
+	new_count="$(mu find flag:new 2>/dev/null | wc -l)"
 	echo "${GREEN}${new_count}✉"
 }
 
