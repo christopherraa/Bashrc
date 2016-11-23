@@ -1,2 +1,2 @@
 #export PERL_UNICODE=SDL
-alias pb=perlbrew
+perldoc -MPod::Text::Color::Delight
