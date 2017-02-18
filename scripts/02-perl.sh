@@ -1,2 +1,2 @@
 #export PERL_UNICODE=SDL
-perldoc -MPod::Text::Color::Delight
+export PERLDOC="-MPod::Text::Color::Delight"
